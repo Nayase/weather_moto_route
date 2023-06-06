@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+ <meta charset="utf-8">
+ <title>サイトタイトル</title>
+ <meta name="description" content="ディスクリプションを入力">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
+ <!-- [if lt IE 9] -->
+ <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+ <!-- [endif] -->
+ <script src="main.js"></script>
+ </head>
+ <body>
+ <!----- header----->
+ <header></header>
+ <nav></nav>
+ <!----- /header ----->
+ 
+ <!----- main ----->
+ <article>
+    <form class="contact-form" action="receive.py" method="post">
+        <h1>道のり天気🌤</h1>
+        <div class="item">
+          <label class="label" for="origin" name="origin">出発地を教えてください</label>
+          <input id="origin" type="text" maxlength="10" value="" placeholder="１０文字以内で入力">
+        </div>
+        <div class="item">
+          <label class="label" for="destination" name="destination">目的地を教えてください</label>
+          <input id="destination" type="text" maxlength="10" value="" placeholder="１０文字以内で入力">
+        </div>
+        <div class="item">
+          <p class="label">移動手段はどちらですか？</p>
+          <div class="radio-group">
+            <label><input type="radio" name="source">車🚙</label><br>
+            <label><input type="radio" name="source">徒歩🚶‍♀️</label><br>
+          </div>
+        </div>
+        <div class="item">
+          <p class="label">(「車」と選択した方へ)<br>高速道路を使いますか？</p>
+          <input id="highway" type="checkbox" name="highway" checked><label for="check-a">高速道路を使う</label><br>
+        </div>
+        <div class="item no-label">
+          <input type="submit">
+        </div>
+      </form>
+  
+  <style>
+  .contact-form {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 13px;
+    font-family: sans-serif;
+  }
+  .contact-form .item {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .contact-form .item.no-label {
+    padding: 5px 0px 5px 60px;
+  }
+  .contact-form .item .label {
+    float: left;
+    padding: 5px;
+    margin:0;
+  }
+  .contact-form .item .radio-group{
+    padding: 5px 0px 5px 60px;
+  }
+  .contact-form .item input[type=text],
+  .contact-form .item input[type=email],
+  .contact-form .item textarea {
+    display: block;
+    margin-left: 60px;
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 13px;
+  }
+  .contact-form .item ::placeholder {
+    color: #ccc;
+  }
+  .contact-form .item textarea {
+    outline: none;
+    border: 1px solid #ccc;
+    resize: vertical;
+  }
+  input[type=submit] {
+    border: none;
+    outline: none;
+    display: block;
+    line-height: 30px;
+    width: 160px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    background-color: #696;
+    border-bottom: 4px solid #464;
+    cursor:pointer;
+  
+    box-sizing: content-box;
+    transition:0.3s ease all
+  }
+  input[type=submit]:hover{
+    border-bottom-width:0;
+    transform:translateY(4px)
+  }
+  </style>
+ </article>
+ <!----- /main ----->
+
+ <!----- footer ----->
+ <footer></footer>
+ <!----- /footer ----->
+ </body>
+</html>

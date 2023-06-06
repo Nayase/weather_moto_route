@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+ <meta charset="utf-8">
+ <title>道のり天気予報</title>
+ <meta name="description" content="ディスクリプションを入力">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
+ <!-- [if lt IE 9] -->
+ <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+ <!-- [endif] -->
+ <script src="main.js"></script>
+ </head>
+ <body>
+ <!----- header----->
+ <header></header>
+ <nav></nav>
+ <!----- /header ----->
+ 
+ <!----- main ----->
+ <article>
+    <form class="contact-form" action="//www-creators.com/rsc/receiver.php" method="post">
+        <h1>道のり天気🌤</h1>
+        <form action="//www-creators.com/rsc/receiver.php" method="post">
+           <label>出発地を教えてください</label><br>
+           <input type="text" name="first-name" maxlength="10" value="" placeholder="１０文字以内で入力">
+       </form>
+       <form action="//www-creators.com/rsc/receiver.php" method="post">
+           <label>目的地を教えてください</label><br>
+           <input type="text" name="first-name" maxlength="10" value="" placeholder="１０文字以内で入力">
+       </form>
+       <form action="//www-creators.com/rsc/receiver.php" method="post">
+           <label>出発時刻を教えてください</label><br>
+           <input type="date" name="birthday" value="">
+       </form>
+       <form action="//www-creators.com/rsc/receiver.php" method="post">
+           <p>移動手段はどちらですか？</p>
+           <input id="radio-a" type="radio" name="dinner" value="driving" checked><label for="radio-a">車</label><br>
+           <input id="radio-b" type="radio" name="dinner" value="walking"><label for="radio-b">徒歩</label><br>
+       </form>
+       <form action="//www-creators.com/rsc/receiver.php" method="post">
+           <p>(「車」と選択した方へ)高速道路を使いますか？</p>
+           <input id="check-a" type="checkbox" name="hobby" value="スポーツ" checked><label for="check-a">高速道路を使う</label><br>
+       </form>
+
+ </article>
+ <!----- /main ----->
+ 
+ <!----- footer ----->
+ <footer></footer>
+ <!----- /footer ----->
+ </body>
+</html>
