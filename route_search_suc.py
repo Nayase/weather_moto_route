@@ -10,7 +10,7 @@ from pprint import pprint
 
 #Google Maps Platform Directions API endpoint
 endpoint = 'https://maps.googleapis.com/maps/api/directions/json?'
-api_key = 'AIzaSyCRJeZTodQ3sfwKMshfcVC7YoPHmIAGVDg'
+api_key = 'YOUR_API_KEY'
 
 #出発地、目的地を入力
 # origin = input('出発地を入力: ').replace(' ','+')

@@ -7,7 +7,7 @@ import requests
 import json
 from pprint import pprint
 
-GOO_API_KEY = "AIzaSyCRJeZTodQ3sfwKMshfcVC7YoPHmIAGVDg"
+GOO_API_KEY = "YOUR_API_KEY"
 URL_FORMAT = "https://maps.googleapis.com/maps/api/staticmap?center={}"\
     "&zoom={}&size={}&format={}{}&maptype=roadmap"\
     "&key={}"
@@ -27,7 +27,7 @@ def get_lat_lon(city_name):
     return lat, lon
 
 def get_current_weather(city_name):
-    WEA_API_KEY = "7fbaaa87096b13d72001396daaf8825e"  
+    WEA_API_KEY = "YOUR_API_KEY"  
     #api = "http://api.openweathermap.org/data/2.5/weather?units=metric&q={city}&APPID={key}"
     api = "http://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API}"
     lat_g, lon_g = get_lat_lon(city_name)
