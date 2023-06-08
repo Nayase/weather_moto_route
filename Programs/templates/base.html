@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    {% block head %}{% endblock%}
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light p-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/" style="fort-size: 2rem">道のり天気🌤</a>
+      </div>
+    </nav>
+    {% block body %}{% endblock%}
+  </body>
+</html>

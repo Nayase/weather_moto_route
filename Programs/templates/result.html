@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>道のり天気🌤</title>
+{% endblock %}
+
+{% block body %}
+<h2>結果</h2>
+{% for post in posts %}
+<h3>出発地：{{post.departure}}</h3>
+<h3>到着地：{{post.destination}}</h3>
+<p>出発時刻：{{post.time}}</p>
+
+<p style="text-align:center">
+    <img src={{save_name}}>
+</p>
+
+<h3>{{texts.departure_text}}</h3>
+{% for text in texts.middle_texts %}
+    <h3>{{text}}</h3>
+{% endfor %}
+<h3>{{texts.destination_text}}</h3>
+<a href="/" role="button">戻る</a>
+{% endfor %}
+
+{% endblock %}

@@ -16,8 +16,8 @@ ENDPOINT = 'https://maps.googleapis.com/maps/api/directions/json?'
 ENDPOINT2 = 'https://maps.googleapis.com/maps/api/geocode/json?'
 WEA_API_KEY = "7fbaaa87096b13d72001396daaf8825e" 
 GOO_API_KEY = "AIzaSyCRJeZTodQ3sfwKMshfcVC7YoPHmIAGVDg"
-# WEA_API_KEY = "あなたのOpen Weather MapのAPI Keyを入力してください" 
-# GOO_API_KEY = "あなたのGoogle Cloud PlatformのAPI Keyを入力してください"
+WEA_API_KEY = "あなたのOpen Weather MapのAPI Keyを入力してください" 
+GOO_API_KEY = "あなたのGoogle Cloud PlatformのAPI Keyを入力してください"
 URL_FORMAT = "https://maps.googleapis.com/maps/api/staticmap?center={}"\
     "&zoom={}&size={}&format={}{}&maptype=roadmap"\
     "&path={}"\

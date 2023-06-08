@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<meta charset="utf-8">
+<title>道のり天気🌤</title>
+<meta name="description" content="ディスクリプションを入力">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<!-- [if lt IE 9] -->
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<!-- [endif] -->
+<script src="main.js"></script>
+
+{% endblock %}
+
+{% block body %}
+<article>
+    <form class="way-form" action="/result" method="POST">
+        <div class="item">
+            <label for="departure" name="departure">出発地を教えてください.</label>
+            <input id="departure" type="text" name="departure" maxlength="10" value="" placeholder="１０文字以内で入力">
+        </div>
+        <div class="item">
+            <label for="destination" name="destination">目的地を教えてください.</label>
+            <input id="destination" type="text" name="destination" maxlength="10" value="" placeholder="１０文字以内で入力">
+        </div>
+
+        <div class="item">
+            <label for="time">出発時刻を教えてください(5日以内).</label>
+            <input type="datetime-local" name="time" required>
+        </div>
+
+        <div class="item">
+            <p class="label">移動手段はどちらですか？</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="source" value="1">車🚙</label><br>
+                    <label><input type="radio" name="source" value="2">徒歩🚶‍♀️</label><br>
+                </div>
+        </div>
+
+        <div class="item no-label">
+            <input id="highway" type="checkbox" name="highway" value="1" checked><label for="check-a">(「車」と選択した方へ)高速道路を使う</label>
+
+        <div class="item no-label">
+            <input type="submit" value="Create">
+    </form>
+
+    <style>
+    .way-form {
+        border: 1px solid #ccc;
+        padding: 10px;
+        font-size: 13px;
+        font-family: sans-serif;
+    }
+    .way-form .item {
+        display: block;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    .way-form .item.no-label {
+        padding: 5px 0px 5px 60px;
+    }
+    .way-form .item .label {
+        float: left;
+        padding: 5px;
+        margin:0;
+    }
+    .way-form .item .radio-group{
+        padding: 5px 0px 5px 60px;
+    }
+    .way-form .item input[type=text],
+    .way-form .item input[type=email],
+    .way-form .item textarea {
+        display: block;
+        margin-left: 60px;
+        width: 200px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-size: 13px;
+    }
+    .way-form .item ::placeholder {
+        color: #ccc;
+    }
+    .way-form .item textarea {
+        outline: none;
+        border: 1px solid #ccc;
+        resize: vertical;
+    }
+    input[type=submit] {
+        border: none;
+        outline: none;
+        display: block;
+        line-height: 30px;
+        width: 160px;
+        text-align: center;
+        font-size: 13px;
+        color: #fff;
+        background-color: #696;
+        border-bottom: 4px solid #464;
+        cursor:pointer;
+    
+        box-sizing: content-box;
+        transition:0.3s ease all
+    }
+    input[type=submit]:hover{
+        border-bottom-width:0;
+        transform:translateY(4px)
+    }
+    </style>
+</article>
+
+{% endblock %}
